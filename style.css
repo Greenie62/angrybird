@@ -1,0 +1,220 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position:relative;
+}
+
+.gameapp{
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    flex-direction:column;
+    height:100vh;
+    width:100vw;
+    z-index:5;
+    background:black;
+    color:white;
+}
+
+
+
+.gameParent{
+    height:500px;
+    width:500px;
+}
+
+.gameFrame, .game{
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.game{
+    top:10px;
+    left:50px;
+}
+
+
+
+.gameFrame{
+    height:100%;
+    width:100%;
+    
+    /* background:linear-gradient(to right,blue,rgb(38, 38, 153)); */
+    z-index:5;
+}
+
+
+
+
+
+.game{
+    height:400px;
+    width:400px;
+    background:black;
+    z-index:1;
+}
+
+.bird, .wall, .controlRow, .background, .props{
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.background{
+    height:100%;
+    width:100%;
+    background:skyblue;
+}
+
+.wall{
+    height:200px;
+    width:40px;
+    background:blue;
+    transition:1s ease;
+    border:2px solid black;
+   
+}
+
+.wallone{
+    left:560px;
+
+
+}
+
+.walltwo{
+    background:darkgray;
+    left:560px;
+    top:205px;
+
+}
+
+.slide{
+    animation:slide 4s forwards infinite;
+
+}
+
+.slidetwo{
+    animation:slidetwo 4s forwards infinite;
+
+}
+
+
+@keyframes slide{
+    0%{left:560px}
+    100%{left:-40px}
+}
+
+@keyframes slidetwo{
+    0%{left:560px;top:205px;}
+    100%{left:-40px;top:205px;}
+}
+
+.bird{
+    height:75px;
+    width:75px;
+    border-radius:50%;
+    background:red;
+    left:20%;
+    top:150px;
+    transition:1s ease;
+}
+
+.fly_up{
+    animation:fly_up 1s forwards
+}
+
+@keyframes fly_up{
+    0%{top:200px}
+    50%{top:70px}
+    100%{top:200px}
+}
+
+
+.fly_down{
+    animation:fly_down 1s forwards
+}
+
+@keyframes fly_down{
+    0%{top:220px}
+    50%{top:300px}
+    100%{top:200px}
+}
+
+.controlRow{
+    width:200px;
+    background:lightgray;
+    height:50px;
+    top:440px;
+    left:150px;
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+
+}
+
+
+.arrow{
+    transform:scale(2)
+}
+
+.eye, .beak, .wing{
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.eye{
+    width:5px;
+    height:5px;
+    background:black;
+    top:25px;
+    left:55px;
+}
+
+.beak{
+    width:15px;
+    height:5px;
+    background:black;
+    border-top-right-radius:35%;
+    border-bottom-right-radius:35%;
+    top:30px;
+    left:70px;
+    z-index:1;
+}
+
+.wing{
+    border:1px solid black;
+    width:40px;
+    height:20px;
+    border-radius:50%;
+    background:rgb(236, 24, 24);
+    top:25px;
+    left:5px;
+}
+
+.cloud{
+    height:85px;
+    width:100px;
+    border-radius:50%;
+    background:white;
+}
+
+.cloudtwo{
+    top:105px;
+    left:175px;
+}
+
+.cloudthree{
+    top:145px;
+}
+
+.props{
+    left:100px;
+    top:100px;
+    width:50px;
+    height:20px;
+    color:black;
+}
